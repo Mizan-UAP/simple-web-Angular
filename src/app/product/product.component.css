@@ -1,0 +1,46 @@
+.headerComponent {
+    margin-top:10px;
+    padding: 5px;
+    height: 45px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.233)
+    
+
+}
+.ButtonLogo{
+    height: 22px;
+    width: 80px;
+}
+.inputField{
+    width: 500px;
+}
+.form-group{
+    display:flex;
+}
+.rightHeaderBtn{
+    align:right;
+}
+.navBarSecond{
+    background-color:rgba(24, 24, 63, 0.685);
+}
+.advertiseBackground{
+    background-color:rgba(128, 128, 128, 0.096);
+    width:100%;
+    height: 100px;
+    padding: 8px;
+    margin-left: 0%;
+}
+.product{
+    margin-top:50px;
+    
+}
+.productFullImg{
+    height: 200px;
+    width: 200px;
+}
+.product img:hover{
+
+    height: 350px;
+    width: 350px;
+
+}

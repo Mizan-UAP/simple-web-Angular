@@ -1,0 +1,145 @@
+<header>
+    <div class="container-fluid headerComponent">
+        <div class="row">
+            <div class="col-sm-3">
+                <button type="button">dropdown </button>
+                <button type="button">
+                    <img class="ButtonLogo" src="/assets/images/amazon.png" alt="" srcset="">
+                </button>
+            </div>
+            <div class="col-sm-5">
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" class="form-control inputField">
+                        <button type="button" class="btn btn-"> Search</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-4 rightHeaderbtn ">
+                <button>country</button>
+                <button>Sign in</button>
+                <button>Returns & order</button>
+                <button>Cart</button>
+
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<div class="navInfo">
+    <nav class="navbar navbar-expand-lg navbar-light bg-black navBarSecond">
+        <a class="navbar-brand" href="#">Delevery to Bangladesh</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Today's deal <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Customer Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gift Cards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Registry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sell</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                Amazon Response to COVID'19
+            </span>
+        </div>
+    </nav>
+</div>
+<div>
+    <div class="row advertiseBackground">
+        <div class="productAddvertise col-sm-2">Product-1</div>
+        <div class="productAddvertise col-sm-2">Product-2</div>
+        <div class="productAddvertise col-sm-2">Product-3</div>
+        <div class="productAddvertise col-sm-2">Product-4</div>
+        <div class="productAddvertise col-sm-2">Product-5</div>
+        <div class="productAddvertise col-sm-2">Product-6</div>
+
+    </div>
+</div>
+
+<div>
+    <div class="row">
+        <div class=" product col-sm-2">
+            <ul>
+                <h3>Department</h3>
+                <li>Computer and accessories</li>
+                <li>Computer and accessories</li>
+                <li>Computer and accessories</li>
+                <li>Computer and accessories</li>
+                <li>Computer and accessories</li>
+                <li>Computer and accessories</li>
+                <li>Computer and accessories</li>
+                <li>Computer and accessories</li>
+                <li>Computer and accessories</li>
+                <li>Computer and accessories</li>
+
+            </ul>
+        </div>
+        <div class="product col-sm-7 ">
+            <div class="row" *ngFor="let product of productList">
+                <div class="row" *ngIf="!details">
+                    <div class="product col-sm-6">
+                        <img class="productFullImg" src="/assets/images/mouse 1.jpg" alt="image" srcset="">
+                    </div>
+                    <div class="product col-sm-6">
+                        <p><a  [routerLink]="['/second-component', product.id]" routerLinkActive="active">{{product.name}}</a></p>
+                        <!-- <p><a [routerLink]="['/detail', product.id]" routerLink="/second-component" routerLinkActive="active">{{product.name}}</a></p> -->
+
+                        <h3 style="color: rgba(0, 0, 255, 0.623)" (click)="detailsInfo(product)"></h3>
+                        <h4> $<span style="color: rgba(218, 13, 13, 0.815)">{{product.price}}</span></h4>
+                        <h5>Brand: <span style="color: rgb(47, 255, 255)"> {{product.brand}}</span> </h5>
+                    </div>
+
+                </div>
+                <div class="row" *ngIf="details">
+                    <div class="product col-sm-6">
+                        <img class="productFullImg" src="/assets/images/mouse 2.jpg" alt="image" srcset="">
+                    </div>
+                    <div class="product col-sm-6">
+                        <h4>ID: {{product.id}}</h4>
+                        <h3 style="color: rgba(0, 0, 255, 0.623)" (click)="detailsInfo(product)">{{product.name}}</h3>
+                        <h4> $<span style="color: rgba(218, 13, 13, 0.815)">{{product.price}}</span></h4>
+                        <h5>Brand: <span style="color: rgb(47, 255, 255)"> {{product.brand}}</span> </h5>
+                        <h4>Colour: {{product.color}}</h4>
+                        <h4>
+                            details: <li>{{product.details}}</li>
+                        </h4>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="product col-sm-2">
+            <h4>Price</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, deserunt eius, ipsa
+                corporis ad, fugit itaque animi obcaecati cum quidem at inventore minus excepturi voluptatibus dolor
+                perspiciatis saepe amet maxime! </p>
+
+            <div style="text-align:center">
+                <h5>in stock</h5>
+                <button>QTY</button><br><br>
+                <button type="button"> Add to cart</button><br><br>
+                <button type="button"> Buy</button><br>
+                <p>Secure Transaction</p>
+                <p></p>
+            </div>
+            <h5>Add gift option</h5>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<h2><p>{{productId}}</p></h2>
+
+<div class="row" *ngIf="details">
+    <div class="product col-sm-6">
+        <img class="productFullImg" src="/assets/images/mouse 2.jpg" alt="image" srcset="">
+    </div>
+    <div class="product col-sm-6">
+        <h4>ID: {{productID}}</h4>
+        <h3 style="color: rgba(0, 0, 255, 0.623)" (click)="detailsInfo(product)">{{product.name}}</h3>
+        <h4> $<span style="color: rgba(218, 13, 13, 0.815)">{{product.price}}</span></h4>
+        <h5>Brand: <span style="color: rgb(47, 255, 255)"> {{product.brand}}</span> </h5>
+        <h4>Colour: {{product.color}}</h4>
+        <h4>
+            details: <li>{{product.details}}</li>
+        </h4>
+
+    </div>
+</div>
